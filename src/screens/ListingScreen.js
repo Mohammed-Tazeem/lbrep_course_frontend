@@ -71,7 +71,7 @@ function ListingScreen() {
     const source = Axios.CancelToken.source()
     async function getAllListings() {
       try {
-        const response = await Axios.get("http://127.0.0.1:8000/api/listings/", { cancelToken: source.token })
+        const response = await Axios.get("http://myhotelweb.xyz/api/listings/", { cancelToken: source.token })
         //console.log(response.data);
         setAllListings(response.data);
         setDataIsLoading(false);
