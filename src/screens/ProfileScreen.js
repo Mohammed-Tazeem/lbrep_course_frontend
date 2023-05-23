@@ -75,7 +75,7 @@ function ProfileScreen() {
         async function getProfileInfo() {
             try {
                 const response = await Axios.get(
-                    `http://127.0.0.1:8000/api/profiles/${GloblaState.userId}/`);
+                    `https://www.myhotelweb.xyz/api/profiles/${GloblaState.userId}/`);
                 console.log(response.data)
                 dispatch({ type: 'catchUserProfileInfo', profileObject: response.data })
                 dispatch({ type: 'loadingDone' })
@@ -98,7 +98,7 @@ function ProfileScreen() {
                 formData.append('profile_picture', state.profilePictureValue);
                 try {
                     const response = await Axios.patch(
-                        `http://127.0.0.1:8000/api/profiles/${GloblaState.userId}/update/`,
+                        `https://www.myhotelweb.xyz/api/profiles/${GloblaState.userId}/update/`,
                         formData);
                     console.log(response)
                     //navigate('/listings')

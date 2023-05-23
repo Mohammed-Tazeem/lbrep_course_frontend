@@ -82,7 +82,7 @@ function ProfileScreenUpdate(props) {
         async function getProfileInfo() {
             try {
                 const response = await Axios.get(
-                    `http://127.0.0.1:8000/api/profiles/${GloblaState.userId}/`);
+                    `https://www.myhotelweb.xyz/api/profiles/${GloblaState.userId}/`);
                 console.log(response.data)
                 dispatch({ type: 'catchUserProfileInfo', profileObject: response.data })
 
@@ -118,7 +118,7 @@ function ProfileScreenUpdate(props) {
 
                 try {
                     const response = await Axios.patch(
-                        `http://127.0.0.1:8000/api/profiles/${GloblaState.userId}/update/`,
+                        `https://www.myhotelweb.xyz/api/profiles/${GloblaState.userId}/update/`,
                         formData);
                     console.log(response)
                     navigate(0)

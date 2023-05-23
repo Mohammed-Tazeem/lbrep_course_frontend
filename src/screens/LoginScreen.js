@@ -89,7 +89,7 @@ function LoginScreen() {
       async function SignIn() {
         try {
           const response = await Axios.post(
-            "http://127.0.0.1:8000/api-auth-djoser/token/login/",
+            "https://www.myhotelweb.xyz/api-auth-djoser/token/login/",
             {
               username: state.usernameValue,
               password: state.passwordValue,
@@ -135,7 +135,7 @@ function LoginScreen() {
         try {
           //Axios method is get here
           const response = await Axios.get(
-            "http://127.0.0.1:8000/api-auth-djoser/users/me/",
+            "https://www.myhotelweb.xyz/api-auth-djoser/users/me/",
             {
               headers: { Authorization: 'Token '.concat(state.token) }
 

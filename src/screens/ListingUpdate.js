@@ -185,7 +185,7 @@ function ListingUpdate(props) {
                 formData.append('seller', GloblaState.userId);
                 try {
                     const response = await Axios.patch(
-                        `http://127.0.0.1:8000/api/listings/${props.listingData.id}/update/`, formData);
+                        `https://www.myhotelweb.xyz/api/listings/${props.listingData.id}/update/`, formData);
                     console.log(response)
                     //navigate(0)
                     dispatch({ type: 'openTheSnack' })

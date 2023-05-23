@@ -38,7 +38,7 @@ function Header() {
         setAnchorEl(null);
         if (confirmLogout) {
             try {
-                const response = await Axios.post("http://127.0.0.1:8000/api-auth-djoser/token/logout/",
+                const response = await Axios.post("https://www.myhotelweb.xyz/api-auth-djoser/token/logout/",
                     GlobalState.userToken,
                     {
                         headers: { Authorization: 'Token '.concat(GlobalState.userToken) }

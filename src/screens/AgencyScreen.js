@@ -52,7 +52,7 @@ function AgencyScreen() {
         async function getAgencies() {
             try {
                 const response = await Axios.get(
-                    `http://127.0.0.1:8000/api/profiles/`);
+                    `https://www.myhotelweb.xyz/api/profiles/`);
                 console.log(response.data)
                 dispatch({
                     type: 'catchAgenciesInfo',

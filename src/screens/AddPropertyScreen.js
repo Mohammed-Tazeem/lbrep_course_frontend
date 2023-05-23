@@ -867,7 +867,7 @@ function AddPropertyScreen() {
         async function getProfileInfo() {
             try {
                 const response = await Axios.get(
-                    `http://127.0.0.1:8000/api/profiles/${GloblaState.userId}/`);
+                    `https://www.myhotelweb.xyz/api/profiles/${GloblaState.userId}/`);
                 console.log(response.data)
                 dispatch({ type: 'catchUserProfileInfo', profileObject: response.data })
 
@@ -929,7 +929,7 @@ function AddPropertyScreen() {
                 formData.append('seller', GloblaState.userId);
                 try {
                     const response = await Axios.post(
-                        "http://127.0.0.1:8000/api/listings/create/", formData);
+                        "https://www.myhotelweb.xyz/api/listings/create/", formData);
                     console.log(response);
                     dispatch({ type: 'openTheSnack' });
                     //navigate('/listings')

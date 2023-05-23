@@ -104,7 +104,7 @@ function ListingDetails() {
             async function getProfileInfo() {
                 try {
                     const response = await Axios.get(
-                        `http://127.0.0.1:8000/api/profiles/${state.listingInfo.seller}/`);
+                        `https://www.myhotelweb.xyz/api/profiles/${state.listingInfo.seller}/`);
                     console.log(response.data)
                     dispatch({ type: 'catchSellerProfileInfo', profileObject: response.data })
 
@@ -125,7 +125,7 @@ function ListingDetails() {
         async function getListingInfo() {
             try {
                 const response = await Axios.get(
-                    `http://127.0.0.1:8000/api/listings/${params.id}/`);
+                    `https://www.myhotelweb.xyz/api/listings/${params.id}/`);
                 console.log(response.data)
                 dispatch({ type: 'catchListingInfo', listingObject: response.data })
                 dispatch({ type: 'loadingDone' })
@@ -178,7 +178,7 @@ function ListingDetails() {
         if (confirmDelete) {
             try {
                 const response = await Axios.delete(
-                    `http://127.0.0.1:8000/api/listings/${params.id}/delete/`
+                    `https://www.myhotelweb.xyz/api/listings/${params.id}/delete/`
                 )
                 console.log(response.data);
                 dispatch({ type: 'openTheSnack' });

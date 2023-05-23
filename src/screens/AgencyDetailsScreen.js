@@ -83,7 +83,7 @@ function AgencyDetailsScreen() {
     async function getProfileInfo() {
       try {
         const response = await Axios.get(
-          `http://127.0.0.1:8000/api/profiles/${params.id}/`);
+          `https://www.myhotelweb.xyz/api/profiles/${params.id}/`);
         console.log(response.data)
         dispatch({ type: 'catchUserProfileInfo', profileObject: response.data })
         dispatch({ type: 'loadingDone' })
@@ -106,7 +106,7 @@ function AgencyDetailsScreen() {
               formData.append('profile_picture', state.profilePictureValue);
               try {
                   const response = await Axios.patch(
-                      `http://127.0.0.1:8000/api/profiles/${GloblaState.userId}/update/`,
+                      `https://www.myhotelweb.xyz/api/profiles/${GloblaState.userId}/update/`,
                       formData);
                   console.log(response)
                   //navigate('/listings')
@@ -230,9 +230,9 @@ function AgencyDetailsScreen() {
                   component='img'
                   height='140'
                   image={
-                    `http://127.0.0.1:8000${listing.picture1}`
+                    `https://www.myhotelweb.xyz${listing.picture1}`
                       ?
-                      `http://127.0.0.1:8000${listing.picture1}` :
+                      `https://www.myhotelweb.xyz${listing.picture1}` :
                       defaultProfilePicture}
                   alt="listing Picture"
                   onClick={() => navigate(`/listings/${listing.id}`)}

@@ -167,7 +167,7 @@ function RegisterScreen() {
       async function SignUp() {
         try {
           const response = await Axios.post(
-            "http://127.0.0.1:8000/api-auth-djoser/users/",
+            "https://www.myhotelweb.xyz/api-auth-djoser/users/",
             {
               username: state.usernameValue,
               email: state.emailValue,
